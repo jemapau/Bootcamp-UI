@@ -1,0 +1,50 @@
+@media (min-width: 750px) {
+  .hero-heading {
+    font-size: 3.0rem;
+    text-align: left;
+  }
+
+  .hero .button-primary {
+    float: left;
+  }
+
+  .section-description {
+    width: 48%;
+    margin: 2rem auto;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .section {
+
+    padding: 20rem 0 19rem;
+
+  }
+
+  .hero {
+    padding: 0rem 0 0rem;
+  }
+
+  .hero .container .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .phone {
+    position: relative;
+    max-height: 615px;
+    z-index: 2;
+    top: -15px;
+  }
+
+  .phone + .phone {
+    position: absolute;
+    top: 15px;
+    display: inline-block;
+    right: 5px;
+    z-index: 1;
+    max-height: 545px;
+  }
+
+}
