@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 @media (max-width: 560px) {
   header {
     min-height: 50px;
@@ -7,10 +8,22 @@
 
   .container {
     width: 100%;
+=======
+@media only screen and (max-width: 560px){
+  .container {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    height: 50px;
+>>>>>>> 8c2ad0fb61dcb114fd28fde00ad95302295c6ceb
   }
 
   .navigation {
     display: block;
+<<<<<<< HEAD
     width: 100%;
     float: left;
     height: auto;
@@ -30,4 +43,56 @@
     margin-bottom: 20px;
   }
 
+=======
+    float: left;
+    width: 89%;
+    padding: 0 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+
+  .nav_responsive {
+    display: inline-flex;
+  }
+
+  .search {
+    float: right;
+  }
+
+  .access {
+    padding: 20px;
+  }
+
+  .access .container {
+    display: block;
+  }
+
+  .access_item {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 40px;
+  }
+
+  .article {
+    display: block;
+    width: auto;
+    padding: 20px;
+    margin: 40px;
+  }
+
+  aside.author {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .author_contact input, .author_contact textarea {
+    width: 90%;
+    margin: 0 20px 20px 0px;
+  }
+>>>>>>> 8c2ad0fb61dcb114fd28fde00ad95302295c6ceb
 }

@@ -1,6 +1,7 @@
 Flex panels - exercise
 ----------------------
-Practice with CSS flexbox and vanilla JS. Challenge from Wes Bos' JavaScript30 course.
+
+This was an exercise to implement Flexbox using a basic HTML layout. "Back to Basic"
 
 A [Pen](https://codepen.io/jemapau/pen/RewRPy) by [Maria Paulina](https://codepen.io/jemapau) on [CodePen](https://codepen.io).
 
