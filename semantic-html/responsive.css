@@ -1,0 +1,33 @@
+
+
+@media (max-width: 560px) {
+  header {
+    min-height: 50px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .navigation {
+    display: block;
+    width: 100%;
+    float: left;
+    height: auto;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .nav_item {
+    display: block;
+  }
+
+  .access .container {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 20px;
+  }
+
+}
