@@ -9,17 +9,60 @@
 
 </head>
 <body>
-  <audio src="./sounds/fizzle.wav"></audio>
-  <audio src="./sounds/hat.wav"></audio>
-  <audio src="./sounds/kick.wav"></audio>
-  <audio src="./sounds/snare.wav"></audio>
-  <audio src="./sounds/snarezz.wav"></audio>
-  <audio src="./sounds/synth.wav"></audio>
-  <audio src="./sounds/vox1.wav"></audio>
-  <audio src="./sounds/vox2.wav"></audio>
-  <audio src="./sounds/vox3.wav"></audio>
-  <audio src="./sounds/wood.wav"></audio>
+
+<div id="audiecito"></div>
+
+<div class="container">
+  <div id="miTeclita81">Q</div>
+  <div id="miTeclita87">w</div>
+  <div id="miTeclita69">E</div>
+  <div id="miTeclita82">R</div>
+  <div id="miTeclita84">T</div>
+  <div id="miTeclita89">Y</div>
+  <div id="miTeclita85">U</div>
+  <div id="miTeclita73">I</div>
+  <div id="miTeclita79">O</div>
+  <div id="miTeclita32">Spacebar</div>
+</div>
+
+
+  <audio id="audiecito81" src="./sounds/fizzle.wav"></audio>
+  <audio id="audiecito87" src="./sounds/hat.wav"></audio>
+  <audio id="audiecito69" src="./sounds/kick.wav"></audio>
+  <audio id="audiecito82" src="./sounds/snare.wav"></audio>
+  <audio id="audiecito84" src="./sounds/snarezz.wav"></audio>
+  <audio id="audiecito89" src="./sounds/synth.wav"></audio>
+  <audio id="audiecito85" src="./sounds/vox1.wav"></audio>
+  <audio id="audiecito73" src="./sounds/vox2.wav"></audio>
+  <audio id="audiecito79" src="./sounds/vox3.wav"></audio>
+  <audio id="audiecito32" src="./sounds/wood.wav"></audio>
+
+
   <script type="text/javascript">
+
+  // A callback it is a function in which is call an other function as an other parameter.
+
+    function showKey(e) {
+      console.log(e.key, e.keyCode);
+      var myAudio = document.querySelector("#audiecito"+e.keyCode);
+
+      if(myAudio) {
+        myAudio.currentTime = 0;
+        myAudio.play();
+      }
+
+      var miTeclita = document.querySelector("#miTeclita"+e.keyCode);
+      miTeclita.style.backgroundColor = 'aqua';
+      setTimeout( function(){
+        miTeclita.style.background = 'white';
+      }, 200);
+
+    }
+
+    document.addEventListener('keydown', showKey);
+
+
+
       console.log("hello!");
       var name = "maria";
       var number = 2;
