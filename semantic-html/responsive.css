@@ -1,14 +1,4 @@
 
-
-<<<<<<< HEAD
-@media (max-width: 560px) {
-  header {
-    min-height: 50px;
-  }
-
-  .container {
-    width: 100%;
-=======
 @media only screen and (max-width: 560px){
   .container {
     display: block;
@@ -18,35 +8,13 @@
 
   header {
     height: 50px;
->>>>>>> 8c2ad0fb61dcb114fd28fde00ad95302295c6ceb
   }
 
   .navigation {
     display: block;
-<<<<<<< HEAD
-    width: 100%;
     float: left;
-    height: auto;
-  }
-
-  .nav {
-    display: block;
-  }
-
-  .nav_item {
-    display: block;
-  }
-
-  .access .container {
-    display: flex;
-    align-items: stretch;
-    margin-bottom: 20px;
-  }
-
-=======
-    float: left;
-    width: 89%;
     padding: 0 20px;
+    width: 89%;
   }
 
   .nav {
@@ -94,5 +62,4 @@
     width: 90%;
     margin: 0 20px 20px 0px;
   }
->>>>>>> 8c2ad0fb61dcb114fd28fde00ad95302295c6ceb
 }

@@ -26,13 +26,31 @@ a {
 }
 
 header {
-  display: block;
+  display: flex;
+  align-items: center;
   background: white;
   height: 56px;
 }
 
 .navigation {
   float: right;
+}
+
+.nav_responsive {
+  display: none;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+
+.nav_responsive i {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: grey;
+  margin-bottom: 5px;
 }
 
 .nav {
@@ -101,7 +119,6 @@ header {
 
 .article {
   float: left;
-  display: inline-block;
   width: 40%;
   background: rgba(153, 158, 166, 0.09);
   margin: 40px 40px;
@@ -119,7 +136,6 @@ header {
 
 .author {
   float: right;
-  display: inline-block;
   width: 20%;
   margin-top: 40px;
   padding-top: 20px;
