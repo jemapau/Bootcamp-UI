@@ -63,3 +63,48 @@
     margin: 0 20px 20px 0px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1095px )  {
+
+  .container {
+    width: 100%;
+  }
+
+  .access {
+    padding: 20px;
+  }
+
+  .access .container {
+    display: inline-flex;
+  }
+
+  .access_item {
+    width: calc(100% - 50%);
+    height: auto;
+  }
+
+  .access_item_link {
+    font-size: 14px;
+  }
+
+  .article {
+    width: calc(100% - 60%);
+    margin: 5%;
+    padding: 5%;
+  }
+
+  .author {
+    width: 20%;
+    float: left;
+    padding: 2%;
+  }
+
+  .author h1, .author .author_img , .author .author_desc, .author .author_contact  {
+    margin: 20px auto;
+  }
+
+  .author_contact input, .author_contact textarea {
+    width: 96%;
+  }
+
+}
