@@ -1,0 +1,216 @@
+
+* {
+    margin: 0;
+} 
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Share Tech Mono', 'system-ui', monospace;
+    font-weight: bold;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background: black;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+}
+
+.animation_control {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+}
+
+.animation_control a {
+    color: white;
+    text-decoration: none;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.animation_control a.active {
+    background-color: white;
+    color: black;
+}
+
+.game {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.mb_player {
+    margin-left: 10px;
+
+}
+
+.mb_coins {
+    flex-direction: row;
+}
+
+.mb_time {
+    margin-right: 10px;
+}
+
+.mb_container {
+    overflow: hidden;
+    position: relative;
+    width: 1090px;
+    height: 680px;
+    background-color: aqua;
+    margin: 0 auto;
+    background: url(images/mario_bros_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mario_img {
+    position: absolute;
+    left: -5px;
+    bottom: 48px;
+    width: 50px;
+    height: 100px;
+    background: url('images/mario_bros_img.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*animation: marioAnimation 6s infinite;*/
+}
+
+.mario_img.animation {
+    animation: marioAnimation 6s forwards;
+}
+
+.coin {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url('images/coin.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: coinAnimation 1s infinite;
+}
+
+.coin_two {
+    position: absolute;
+    left: 500px;
+    bottom: 200px;
+    position: absolute;
+    left: 335px;
+    bottom: 290px;
+    width: 25px;
+    height: 25px;
+    background: url('images/coin.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.coin-anim {
+    animation: coinDisplay 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.disclaimer {
+    position: absolute;
+    display: block;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
+
+
+@keyframes marioAnimation {
+    0% {
+     transform: translateX(0px);
+     transition: ease-in;
+   }
+   5% {
+       transform: translate(310px, 0px);
+   }
+   15% {
+       transform: translate(320px, -95px);
+   }
+   25% {
+       transform: translate(340px, -0px);
+   }
+   35% {
+       transform: translate(425px, -0px);
+   }
+   50% {
+    transform: translate(490px, -70px);
+    }
+    65% {
+        transform: translate(600px, -0px);
+    }
+    80% {
+        transform: translate(860px, -0px);
+    }
+
+    85% {
+        transform: translate(860px, -95px);
+    }
+
+    90% {
+        transform: translate(945px, -95px);
+    }
+
+    95% {
+        transform: translate(945px, -95px) scaleY(1) translateY(1%);
+    }
+
+    100% {
+        transform: translate(945px, -95px) scaleY(0) translateY(0%);
+    }
+ }
+
+ @keyframes coinAnimation {
+     from {
+         transform: rotateY(0deg);
+     } to {
+        transform: rotateY(180deg);
+     }
+ }
+
+ @keyframes coinDisplay {
+     0% {
+         transform: translateY(0px);
+         transition: ease-in-out;
+         opacity: 0;
+     } 
+     15% {
+         transform: translateY(-20px);
+         transition: ease-in-out;
+         opacity: 1;
+     }
+     100% {
+         transform: translateY(-20px);
+         transition: ease-in-out;
+         opacity: 0;
+    }
+ }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mario Bros</title>
+
+    <link rel='shortcut icon' type='image/x-icon' href='images/mario.ico' />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Share+Tech+Mono|VT323" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="animation_control">
+        <a href="#" id="button">Play Animation</a>
+        <a href="#" id="stop">Stop Animation</a>
+    </div>
+    <section class="mb_container">
+            <header class="game">
+                        <div class="game_data mb_player">mario<p>00000</p></div>
+                        <div class="game_data mb_coins"><div><span class="coin"></span> x 00</div></div>
+                        <div class="game_data mb_world">World <p>1-1<p></div>
+                        <div class="game_data mb_time">Time <p>00000</p></div>
+            </header>
+            <div class="coin_two" id="coinTwo"></div>
+            <figure class="mario_img" id="marioImg"></figure>
+    </section>
+    <footer class="disclaimer">Animation made with CSS</footer>
+    <script>
+
+        document.querySelector("#button").addEventListener("click", marioMoves);
+        document.querySelector("#button").addEventListener("click", coinMoves);
+        document.querySelector("#marioImg").addEventListener("webkitAnimationEnd", marioStops);
+        document.querySelector("#marioImg").addEventListener("webkitAnimationEnd", coinStops);
+        document.querySelector("#stop").addEventListener("click", marioStops);
+        document.querySelector("#stop").addEventListener("click", coinStops);
+
+        function marioMoves() {
+            var playBtn = document.querySelector("#button");
+            var element = document.getElementById("marioImg");
+            element.classList.add("animation");
+            playBtn.classList.add("active");
+            document.querySelector("#stop").classList.remove("active");
+        }
+
+        function marioStops() {
+            var playBtn = document.querySelector("#button");
+            var element = document.getElementById("marioImg");
+            element.classList.remove("animation");
+            playBtn.classList.remove("active");
+            document.querySelector("#stop").classList.add("active");
+        }
+
+        function coinMoves() {
+            var coin = document.getElementById("coinTwo");
+            coin.classList.add("coin-anim");
+        }
+
+        function coinStops() {
+            var coin = document.getElementById("coinTwo");
+            coin.classList.remove("coin-anim");
+        }
+
+    </script>
+</body>
+</html>
