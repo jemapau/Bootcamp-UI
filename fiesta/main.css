@@ -1,3 +1,132 @@
 body {
-  font-family: system-ui;
+  font-family: 'Unica One', cursive;
+  background: #f9f1de;
+}
+
+.orange {
+  background: #ff6100;
+}
+
+
+.art {
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.container  {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.key {
+  display: block;
+  text-align: center;
+}
+
+.key_top {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.key_top .key_item  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.key_item {
+  position: relative;
+  background: black;
+  color: #f9f1dd;
+  border: 1px solid transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+
+
+.key_space {
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key_active {
+  border: 1px solid #ff6100;
+  animation: keyAnimation 0.5s infinite;
+}
+
+.st3 {
+  stroke: black;
+  animation: sound 1s linear infinite;
+}
+
+
+.day_text {
+  fill:none;
+  stroke:#000000;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
+  animation: dash 5s linear forwards;
+  animation-delay: 3s;
+}
+
+.radio_color .st2  {
+  fill: white;
+}
+
+.disclaimer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes keyAnimation {
+  0% {
+    background: #ff6100;
+  }
+
+  50% {
+    background: black;
+  }
+
+  100% {
+    background: #ff6100;
+  }
+
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+  }
+  50% {
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+  }
+  100% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes sound {
+  50% {
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+  }
+  100% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
 }
