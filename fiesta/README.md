@@ -13,7 +13,9 @@ String, number, boolean, Undefined, NaN, null
  array
 
 
-## Json
+## Image
+
+![Radio Station](https://image.prntscr.com/image/XP0lKkuyRFyu_D3UJTIjLg.png)
 
 
 ## Notes
