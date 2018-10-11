@@ -1,0 +1,19 @@
+section {
+    display: inline-block;
+    width: 25%;
+}
+
+.section-one {
+    height: 100px;
+    background-color: blue;
+}
+
+.section-two {
+    float: right;
+    height: 100px;
+    background-color: pink;
+}
+
+.hide {
+    display: none;
+}
