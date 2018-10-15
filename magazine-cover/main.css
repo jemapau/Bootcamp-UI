@@ -1,0 +1,253 @@
+
+/* Container Magazine */
+
+body {
+    background: #1f1f1f;
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 824px;
+    background-image: url("jade-smith.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ 
+ .img-cover {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: auto;
+    height: 100%;
+ }
+ 
+ h1 {
+    line-height:0px;
+    height: 165px;
+ }
+ 
+ h1 .logo {  
+    position: relative;
+    width: 50%;
+    left: -10px;
+    top: 65px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 180px;
+    color: #120531;
+    -webkit-text-stroke: 5px #120531;
+    letter-spacing: -20px;
+ }
+ 
+ h1 .logo:before {
+    position: absolute;
+    content: "GQ";
+    left: 0px;
+    right: 0;
+    top: 50;
+    color: white;
+    font-size: 180px;
+    z-index: 1;
+    -webkit-text-stroke: 0px ;
+ }
+ 
+ h1 .pre { 
+     position: absolute;
+     left: 80px;
+     top: 113px;
+     font-family: 'Raleway', sans-serif;
+     font-size: 15px;
+     color: #120531;
+     z-index: 2;
+     -webkit-text-stroke: 0px;
+     letter-spacing: 0px;
+ }
+ 
+ .text {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 55%;
+ }
+ 
+ h2 .title { 
+    font-family: 'Sumana', serif;
+    font-size: 130px;
+    line-height: 60px;
+    padding: 0px;
+    margin: 0px;
+      -webkit-text-stroke: 1px white;
+ }
+ 
+ h2.subtitle { 
+    font-family: 'Sumana', serif; 
+    font-size: 18px;
+    color: #120531;
+ }
+ 
+ .lower { 
+    color: #120531;
+    font-family: 'Rozha One', serif;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 130px;
+ }
+ 
+ .lower .up-left .gq {
+    display:block;
+    position: left;
+ }
+ 
+ .low-left h4.block-text {
+    position: absolute;
+    bottom: 0px;
+ }
+ 
+ .low-left h4.block-text.white p span{
+    background: white;
+    color: #120531;
+    font-size: 25px;
+    line-height: 25px;
+ }
+ 
+ .low-right {
+ position: absolute;
+  bottom: 280px;
+  right: 40px;
+  float: right;
+  width: 400px;
+ }
+ 
+ 
+ .low-right .block-text span {
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 20px;
+    
+ }
+ 
+ .low-right .block-text.white span {
+    display: inline-block;
+    color: #120531;
+    background-color: white; 
+ }
+ 
+ 
+ 
+ .low-right .block-text.white span:nth-child(1) {
+    transform: rotate(-2deg);
+    margin-bottom: 20px;
+ }
+ 
+ .low-right .block-text:nth-child(1) {
+    position: absolute;
+    transform: rotate(-5deg);
+    right: 0px;
+    top: -40px;
+ }
+ 
+ .low-right .block-text:nth-child(2) {
+    position: absolute;
+    transform: rotate(-5deg);
+    left: 50px;
+    top: 70px;
+ }
+ 
+ .low-right .block-text:nth-child(3) {
+    position: absolute;
+    transform: rotate(5deg);
+    right: 50px;
+    top: 130px;
+ }
+ 
+ .low-right .block-text:nth-child(4)  {
+    position: absolute;
+    transform: rotate(-5deg);
+    top: 200px;
+    bottom: 0;
+    right: 0px;
+ }
+ 
+ .low-right .block-text.white span:last-child {
+    transform: rotate(5deg);
+ }
+ 
+ .low-right .block-text.black span{
+    background-color: #120531;
+    color: white;
+ 
+ }
+ 
+ .up-left {
+    position: relative;
+    left: 0;
+    top: 20px;
+    clear: both;
+ }
+ 
+ .up-left p.gq { 
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    line-height: 0px;
+ }
+ .up-left p.uk {
+    margin-top: 0px;
+ }
+ .up-left h2 {
+     font-size: 19px;
+     color: #120531;
+     line-height: 25px;
+ }
+ 
+ .up-left h2 span {
+    font-size: 45px;
+ }
+ 
+ .up-left p {
+    margin-bottom: 5px;
+ }
+ 
+ h4.block-text {
+    line-height: 20px;
+ }
+ 
+ h4.block-text p span {
+    padding: 0 10px;
+ }
+ 
+ .up-left h4.block-text.black p span {
+    background: #120531;
+    color: white;
+    font-size: 24px;
+    line-height: 20px;
+ }
+ 
+ 
+ h4.block-text.black p span{
+    background:#120531;
+    color: white;
+    font-size: 28px;
+    line-height: 15px;
+ }
+ 
+ .up-right {
+    width: 200px;
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    right: 25px;
+    top: 6px;
+    line-height: 51px;
+ }
+ 
+ 
+ 
+ 

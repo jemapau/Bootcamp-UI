@@ -1,0 +1,122 @@
+body  {
+    padding: 50px;
+    color: white;
+     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1462456490601-4f7e60c96c5e?ixlib=rb-0.3.5&s=f63007aa8e8270bc7c84c682f071c478&auto=format&fit=crop&w=1267&q=80');
+    background-size: cover;
+    background-position: 10%;
+    background-repeat: no-repeat;
+  }
+  
+  header {
+    display: block;
+    height: 100px;
+    padding-bottom: 20px;
+  }
+  
+  h1 {
+    float: left;
+  }
+  
+  .user {
+    display: inline-flex;
+    float: right;
+    width: 265px;
+  }
+  
+  .user-info {
+    margin-right: 20px;
+    align-items: start;
+  }
+  
+  .user-info h2 {
+    line-height: 0px;
+  }
+  
+  
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+  }
+  
+  section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  section .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    height: 250px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .box {
+    width: 410px;
+    height: 410px;
+    padding: 5px;
+  }
+  
+  .box_small {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .box_left .box_item {
+    display: inline-block;
+  }
+  
+  .box_left  .box_item:last-child {
+    float: right;
+  }
+  
+  .box_middle {
+    width: 616px;
+    height: 410px;
+  }
+  
+  .box_middle .box_item {
+    display: inline-block;
+  }
+  
+  .box_lg {
+    width: 410px;
+    height: 200px;
+  }
+  
+  .box_item {
+    display: inline-block;  
+  }
+  .orange {
+    background-color: #e76022;
+  }
+  
+  .blue {
+    background-color: #00bcd4;
+  }
+  
+  .red {
+    background-color: #da312e;
+  }
+  
+  .green {
+    background-color: #61b812;
+    
+  }
+  
+  .yellow {
+    background-color: #f1d445;
+  }
+  
+  .kitten {
+    background-color: pink;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBxkKU5nAwXRBXkyQIUL4R_CN9hR1jpwmf4S7MUcTrw92-nWhb');
+    background-size: cover;
+    background-position: center;
+  }
+  
