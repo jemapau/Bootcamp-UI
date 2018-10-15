@@ -6,6 +6,7 @@ body  {
     background-size: cover;
     background-position: 10%;
     background-repeat: no-repeat;
+    height: 100vh;
   }
   
   header {
@@ -71,9 +72,9 @@ body  {
     display: inline-block;
   }
   
-  .box_left  .box_item:last-child {
+  /* .box_left  .box_item:last-child {
     float: right;
-  }
+  } */
   
   .box_middle {
     width: 616px;
