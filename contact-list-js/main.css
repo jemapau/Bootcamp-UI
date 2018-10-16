@@ -1,4 +1,4 @@
-git *{
+*{
     margin: 0;
 }
 
@@ -48,7 +48,7 @@ section {
 }
 
 h1.title.contacts_list {
-    margin-top: 320px;
+    margin-top: 180px;
     margin-bottom: 20px;
     margin-left: 15px;
 }
@@ -71,7 +71,7 @@ h1.title.contacts_list {
     display: inline-block;
     background-color: white;
     padding: 20px;
-    width: 200px;
+    width: 250px;
     height: auto;
     margin: 20px 20px;
     border-radius: 5px;
@@ -90,6 +90,10 @@ h1.title.contacts_list {
     margin-left: 20px;
 }
 
+.contact__phone {
+    color: grey;
+}
+
 
 .contact__like {
     background: url(heart-outlined.svg);
@@ -98,14 +102,15 @@ h1.title.contacts_list {
     height: 25px;
     width: 25px;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 15px;
+    top: 15px;
 }
 
 figcaption {
     text-transform: capitalize;
     margin-bottom: 20px;
     font-weight: bold;
+    line-height: 20px;
 }
 
 
@@ -114,7 +119,7 @@ figcaption {
     overflow-y: hidden;
     overflow-x: auto;
     white-space: nowrap;
-    height: 150px;
+    max-height: 150px;
     background: white;
 }
 

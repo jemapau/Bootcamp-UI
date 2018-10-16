@@ -1,28 +1,28 @@
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
-    body {
-        padding: 0px;
+    header {
+        padding: 20px;
     }
-  .box {
-    width: 260px;
-    height: auto;
-  }
 
-  .box_middle {
-    width: 381px;
-  }
-  
-  .box_item {
-    width: 125px;
-    height: 125px;
-    display: inline-block;  
-  }
+    .wrapper {
+        width: 1024px;
+    }
 
-  .box_middle .box_lg{
-    width: calc(100% - 50%);
-  }
+    .box {
+        width: 250px;
+    }
 
-  .box_left .box_lg{
-    width: 100%;
-  }
+    .box_item {
+        width: 115px;
+        height: 115px;
+    }
+
+    .box_item.box_lg {
+        width: 250px;
+    }
+
+    .box.box_middle {
+        width: 385px;
+    }
+
 } 

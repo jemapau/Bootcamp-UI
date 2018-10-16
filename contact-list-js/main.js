@@ -22,9 +22,15 @@ let show = e.then(function (response){
     const figCap = document.createElement('figcaption');
     const imgContact = document.createElement('img');
 
+    
+    const infoContact = document.createElement('div');
+    infoContact.setAttribute('class', 'contact__phone');
+
     imgContact.setAttribute('class', 'contact__img');
     imgContact.src = contact.picture.large;
     figCap.innerHTML = '<p>' + contact.name.first + '</p>' + ' ' + contact.name.last;
+
+    infoContact.innerHTML = '<p><strong>Phone: </strong></p>' + contact.cell;
 
     const article = document.createElement('article');
     article.setAttribute('class', 'contact');
@@ -47,6 +53,7 @@ let show = e.then(function (response){
     card.appendChild(imgContact);
     card.appendChild(contactInfo);
     contactInfo.appendChild(figCap);
+    contactInfo.appendChild(infoContact);
     contactInfo.appendChild(contactAdd);
 
 
