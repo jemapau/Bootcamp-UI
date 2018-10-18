@@ -12,8 +12,7 @@ class App extends Component {
   render() {
 
     return (
-      <div className="wrapper">
-        <div className="App">
+      <div className="App">
           <BrowserRouter>
             <div>
               <Navigation />
@@ -21,7 +20,6 @@ class App extends Component {
               <Route exact path="/contactlist" component={ContactListSection} />
             </div>
           </BrowserRouter>
-        </div>
       </div>
     );
   }
@@ -29,13 +27,13 @@ class App extends Component {
 
 const Navigation = (props) => {
   return (
-    <nav>
+    <nav className="navigation">
       <ul>
         <li>
           <Link to={`/`}>Home</Link>
         </li>
         <li>
-        <Link to={`/contactlist`}> Contact</Link>
+        <Link to={`/contactlist`}> Contacts</Link>
         </li>
       </ul>
     </nav>
@@ -44,8 +42,11 @@ const Navigation = (props) => {
 
 const Home = (props) => {
   return(
-    <div>
-        Hi!!! 🐨
+    <div className="home">
+        <section className="home__cta">
+             <p>Manage all your contacts in on place <span>💙</span> </p>
+             <Link to={`/contactlist`}  className="home__cta__btn">Start here</Link>
+        </section>
     </div>
   )
 }
@@ -65,6 +66,7 @@ class ContactListSection extends Component {
     };
 
     this.addToFavorites = this.addToFavorites.bind(this);
+    this.onClickDelete = this.onClickDelete.bind(this);
   }
 
   addToFavorites(contact) {
@@ -77,13 +79,26 @@ class ContactListSection extends Component {
     const newFavorites = this.state.favorites.concat(contact);
 
     const newAll = this.state.all.filter(c => c.email !== contact.email);
-    console.log('index', newAll);
+    console.log('index', "This is the new:  " + newAll);
 
     this.setState({
       all: newAll,
       favorites: newFavorites
     });
   }
+
+  onClickDelete(contact) {
+    console.log(this);
+
+    const newFavorites = this.state.favorites; 
+    console.log("Los favs: " + newFavorites);
+    var filteredItems = this.state.favorites.filter(item  => item.name !== contact.name);
+    console.log("This is " + filteredItems);
+
+    this.setState({
+        items: filteredItems
+    });
+}
 
 
   componentDidMount() {
@@ -106,12 +121,10 @@ class ContactListSection extends Component {
   render() {
 
     return (
-      <div className="wrapper">
-        <div className="App">
-        <ContactList className="column" contacts={this.state.all} title="All contacts" key="1" addToFavorites={this.addToFavorites}/>
-        <ContactList className="column" contacts={this.state.favorites} title="Your Favorites" key="2" addToFavorites={this.addToFavorites}/>
+        <div className="wrapper">
+        <ContactList className="column" contacts={this.state.all} title="All contacts" key="1" addToFavorites={this.addToFavorites} onClickDelete={this.onClickDelete}/>
+        <ContactList className="column" contacts={this.state.favorites} title="Your Favorites" key="2" addToFavorites={this.addToFavorites} onClickDelete={this.onClickDelete}/>
         </div>
-      </div>
     );
   }
 }
@@ -124,12 +137,12 @@ const ContactList = (props) => {
   return (
       <div className={props.className}>
         <h2 className="title">{props.title}</h2>
-        {props.contacts.map(contact => <ContactCard  key={contact.name.first}  contact={contact} addToFavorites={props.addToFavorites}/>)}    
+        {props.contacts.map(contact => <ContactCard  key={contact.login.uuid}  contact={contact} addToFavorites={props.addToFavorites} onClickDelete={props.onClickDelete}/>)}    
       </div>
   );
 };
 
-ContactList.ptoptypes  = {
+ContactList.proptypes  = {
   addToFavorites: PropTypes.func.isRequired,
   contacts: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired
@@ -144,12 +157,18 @@ class ContactCard extends Component {
     super(props);
 
     this.onClickFavorites = this.onClickFavorites.bind(this);
-    // this.onClickDelete = this.onClickDelete.remove(this);
+    this.onClickDelete = this.onClickDelete.bind(this);
   }
 
   onClickFavorites() {
       this.props.addToFavorites(this.props.contact);
   }
+
+  onClickDelete() {
+
+    this.props.onClickDelete(this.props.contact);
+
+}
 
   // onClickAll() {
   //   this.props.addToAll(this.props.contact);

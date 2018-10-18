@@ -2,3 +2,61 @@
   text-align: center;
 }
 
+body {
+  background: #f8f9fb;
+  color: #484848;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  width: 670px;
+  margin: 40px auto;
+}
+
+.form__input {
+  padding: 10px 20px;
+  width: 462px;
+  border-radius: 3px;
+  border: 1px solid #d2d2d2;
+  margin-right: 20px;
+  height: 25px;
+  font-size: 22px;
+}
+
+.form__btn {
+  width: 80px;
+  float: right;
+  padding: 13px 20px;
+  background: #78e7b7;
+  border: 1px solid #78e7b7;
+  font-size: 16px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.list {
+  width: 600px;
+  padding-left: 0px;
+  margin: 0 auto;
+}
+
+.list__item {
+  list-style: none;
+  width: 600px;
+  background: white;
+  margin: 10px 0px;
+  padding: 15px;
+}
+
+.list__item:first-child {
+  border-left: 4px solid mediumpurple;
+}
+
+.list__item:nth-child(even) {
+  border-left: 4px solid mediumpurple;
+}
+
+.list__item:nth-child(odd) {
+  border-left: 4px solid coral;
+}
