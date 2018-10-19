@@ -1,26 +1,41 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  position: relative;
+  height: 100vh;
 }
 
 body {
   background: #f8f9fb;
   color: #484848;
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  background-size: 30%;
+  min-height: 100vh;
+  background-image: url('lines.svg');
+}
+
+.todolist__title {
+  font-family: 'Bitter', serif;
+  font-size: 28px;
 }
 
 form {
-  width: 670px;
+  width: 600px;
   margin: 40px auto;
 }
 
 .form__input {
   padding: 10px 20px;
-  width: 462px;
+  width: 455px;
   border-radius: 3px;
   border: 1px solid #d2d2d2;
   margin-right: 20px;
   height: 25px;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .form__btn {
@@ -33,6 +48,7 @@ form {
   border-radius: 3px;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .list {
@@ -42,11 +58,34 @@ form {
 }
 
 .list__item {
+  position: relative;
   list-style: none;
-  width: 600px;
+  text-align: left;
+  width: 530px;
   background: white;
   margin: 10px 0px;
-  padding: 15px;
+  padding: 15px 50px 15px 15px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.list__item::after {
+  position: absolute;
+  content: '';
+  background-image: url('cross.svg');
+  background-repeat: no-repeat;
+  fill: #d2d2d2;
+  right: 10px;
+  bottom: 0;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+}
+
+.list__item:hover {
+  box-shadow: 0px 0px 10px #8c8fad8a;
 }
 
 .list__item:first-child {

@@ -50,10 +50,11 @@ class TodoList extends Component {
     render() {
         return (
             <div className="todolist">
-                <p>Welcome to your Task Board!</p>
+                <h1 className="todolist__title">Welcome to your Task Board!</h1>
+                <p>Don't forget anything and keep your tasks in order:</p>
                 <div className="form">
                     <form onSubmit={this.addItem}>
-                        <input className="form__input" ref={(a) => this._inputElement = a} placeholder="✏️">
+                        <input className="form__input" ref={(a) => this._inputElement = a} placeholder="✏️  Write a task">
                         </input>
                         <button className="form__btn" type="submit">Add</button>
                     </form>
