@@ -1,4 +1,4 @@
-# Contact List Manager
+# Contact List Manager - Work in Progress
 
 An exercise created with React and React Router
 
