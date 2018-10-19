@@ -87,22 +87,25 @@ class ContactListSection extends Component {
     });
   }
 
-  onClickDelete(contact) {
-    console.log(this);
+  onClickDelete(e) {
+    //console.log('Hola este es el contacto: ', e.email);
 
-    const newFavorites = this.state.favorites; 
-    console.log("Los favs: " + newFavorites);
-    var filteredItems = this.state.favorites.filter(item  => item.name !== contact.name);
-    console.log("This is " + filteredItems);
+    const deleteFavorites = this.state.favorites.splice(e,1);
+    const deleteAll = this.state.all.splice(e,1);
+
+    var favItems = this.state.favorites
+
+    console.log("Estos son los items la lista de favoritos" + favItems);
+
 
     this.setState({
-        items: filteredItems
+        items: favItems
     });
 }
 
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/?results=10')
+    fetch('https://randomuser.me/api/?results=60')
       .then(results => results.json())
       .then(data => {
         this.setState ({
@@ -170,16 +173,9 @@ class ContactCard extends Component {
 
 }
 
-  // onClickAll() {
-  //   this.props.addToAll(this.props.contact);
-  // }
-
-  // onClickDelete() {
-  //   this.props.removeContact(this.props.contact);
-  // }
 
   render() {
-    console.log(this.props);
+    //console.log(this.props);
     return (
       <div className="contact">
       <div className="contact__img">

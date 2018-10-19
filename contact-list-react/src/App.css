@@ -40,6 +40,8 @@ body::after {
 .navigation ul {
   display: inline-flex;
   justify-content: flex-start;
+  margin: 0px;
+  padding: 0px 5px;
 }
 
 .navigation ul li {
