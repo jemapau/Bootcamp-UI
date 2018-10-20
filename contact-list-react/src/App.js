@@ -87,25 +87,18 @@ class ContactListSection extends Component {
     });
   }
 
-  onClickDelete(e) {
-    //console.log('Hola este es el contacto: ', e.email);
+  onClickDelete = items => {
 
-    const deleteFavorites = this.state.favorites.splice(e,1);
-    const deleteAll = this.state.all.splice(e,1);
-
-    var favItems = this.state.favorites
-
-    console.log("Estos son los items la lista de favoritos" + favItems);
-
-
+    var allItems = this.state.favorites.filter( e => e !== items);
+    //var deleteFavorites = this.state.favorites.filter(item => item.email !== e.email);
     this.setState({
-        items: favItems
+      favorites: allItems
     });
-}
+  }
 
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/?results=60')
+    fetch('https://randomuser.me/api/?results=3')
       .then(results => results.json())
       .then(data => {
         this.setState ({
