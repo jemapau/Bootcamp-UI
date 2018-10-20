@@ -44,7 +44,7 @@ const Home = (props) => {
   return(
     <div className="home">
         <section className="home__cta">
-             <p>Manage all your contacts in on place <span>💙</span> </p>
+             <p>Manage all your contacts in one place <span role="img" arial-label="heart icon">💙</span> </p>
              <Link to={`/contactlist`}  className="home__cta__btn">Start here</Link>
         </section>
     </div>
