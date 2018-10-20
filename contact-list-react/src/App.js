@@ -88,9 +88,8 @@ class ContactListSection extends Component {
   }
 
   onClickDelete = items => {
-
     var allItems = this.state.favorites.filter( e => e !== items);
-    //var deleteFavorites = this.state.favorites.filter(item => item.email !== e.email);
+
     this.setState({
       favorites: allItems
     });
@@ -98,7 +97,7 @@ class ContactListSection extends Component {
 
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/?results=3')
+    fetch('https://randomuser.me/api/?results=60')
       .then(results => results.json())
       .then(data => {
         this.setState ({
