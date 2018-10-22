@@ -44,7 +44,7 @@ const Home = (props) => {
   return(
     <div className="home">
         <section className="home__cta">
-             <p>Manage all your contacts in one place <span role="img" arial-label="heart icon">💙</span> </p>
+             <p>Manage all your contacts in one place <span role="img" arial-labelledby="heart icon">💙</span> </p>
              <Link to={`/contactlist`}  className="home__cta__btn">Start here</Link>
         </section>
     </div>
@@ -88,10 +88,12 @@ class ContactListSection extends Component {
   }
 
   onClickDelete = items => {
-    var allItems = this.state.favorites.filter( e => e !== items);
+    var allFavs = this.state.favorites.filter( e => e !== items);
+    var allItems = this.state.all.filter( e => e !== items);
 
     this.setState({
-      favorites: allItems
+      favorites: allFavs,
+      all: allItems
     });
   }
 
